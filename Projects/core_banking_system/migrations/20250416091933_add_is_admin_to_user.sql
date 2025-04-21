@@ -1,0 +1,9 @@
+ALTER TABLE users
+ADD COLUMN is_admin BOOLEAN;
+
+UPDATE users
+SET is_admin = FALSE
+WHERE is_admin IS NULL;
+
+ALTER TABLE users
+MODIFY is_admin BOOLEAN NOT NULL DEFAULT FALSE;

@@ -1,0 +1,7 @@
+#Ignore the virtual envrionment folder
+venv/
+
+#ignore other system fiels or IDE specific files
+__pycache__/
+*.__pycache__
+*.pyo

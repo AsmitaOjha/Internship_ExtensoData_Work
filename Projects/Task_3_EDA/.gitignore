@@ -1,0 +1,20 @@
+#Ignore virtual envrionment
+venv/
+
+#Ignore python cache files
+__pycache__/
+*.py[cod]
+*.so
+
+#Ingore jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+#ignore environment files
+.env
+
+#ignore system-specific files
+.DS_Store
+Thumbs.db
+
+#ignore the entire data folder
+data/

@@ -1,0 +1,19 @@
+1. POS Entry Mode — How the Debit Card was Processed
+The POS Entry Mode refers to how the debit card information was captured at the time of the transaction. Here are the common codes and their meanings, specifically for debit cards:
+
+posEntryMode Codes for Debit Cards:
+Code	Meaning
+5.0	    Chip (EMV) read — The most secure method, using an embedded chip on the card (widely used in debit cards now). This is typically used for in-person, face-to-face transactions.
+9.0	    Manual entry — The card details (such as the card number, expiry date, and CVV) are typed manually. This is less secure and often used in situations where the card can't be swiped or read by a chip reader (e.g., if the card is not physically present, or the chip reader fails).
+2.0	    Magnetic stripe swipe — Older method, less secure than the chip. Debit cards with magnetic strips are still widely in use, though most are now being replaced by chip-enabled cards.
+80.0	Contactless — Involves a tap of the debit card on a contactless terminal using NFC (Near Field Communication). Very popular with mobile payments (Apple Pay, Google Pay) as well.
+90.0	Other advanced methods — This could include QR codes or even newer technologies like Bluetooth-enabled devices (used with mobile wallets, for instance).
+
+2. POS Condition Code — Transaction Conditions
+The POS Condition Code indicates the specific condition of the transaction at the time of the debit card's use. This code tells us whether the card was physically present, whether the transaction was online, or if there were any special conditions.
+
+posConditionCode Codes for Debit Cards:
+Code	Meaning
+1.0	    Customer present (in-person) — This means that the cardholder is physically present at the point of sale. Typically, a chip card (EMV) or magnetic stripe would be used for this transaction.
+8.0	    Mail/Phone/Online Order (card-not-present) — This code is used when the transaction takes place online or over the phone, where the card is not physically present. This increases the risk of fraud since the card CVV and other details are manually entered.
+99.0	Unknown or other — This might be used when the system can’t determine the condition of the transaction. This could also represent some fraudulent or suspicious activity or any conditions that don’t fit into the usual categories.
