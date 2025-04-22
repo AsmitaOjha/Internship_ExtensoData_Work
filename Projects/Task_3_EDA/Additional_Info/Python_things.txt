@@ -1,0 +1,11 @@
+fillna(): A pandas function used to fill missing values in a Dataframe or series
+Example:
+df['column_name'].fillna(value)
+
+mode(): A pandas method that calculates the most frequent value in a column. It returns a Series of the most frequent value(s), and it can be used on both numerical and categorial data.
+mode()[0]: it returns the first value in that series
+
+inplace = True: is a parameter that modifies the original object(like the dataframe or series) directly, without needing to reassign it.
+i.e. modifies the df dataframe in-place (without creating a new copy)
+
+More about outliers: https://medium.com/@aakash013/outlier-detection-treatment-z-score-iqr-and-robust-methods-398c99450ff3#:~:text=Generally%2C%20any%20data%20point%20with,3)%20is%20considered%20an%20outlier.&text=Pros%3A%20Easy%20to%20implement%2C%20works%20well%20for%20normally%20distributed%20data.
