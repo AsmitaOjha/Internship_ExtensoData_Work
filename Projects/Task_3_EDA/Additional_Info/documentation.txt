@@ -1,0 +1,14 @@
+Task 3 assigned on Sunday, April 20, 2025
+Steps I followed
+1. Study the dataset and it's column descriptions
+2. Downloaded the dataset
+3. Maintained a folder to keep the data and jupyter notebook for task 3 and EDA to be done 
+4. Setup a virtual environment for the EDA task 
+5. Activated the virtual environment and installed necessary packages for EDA like: pandas, matplotlib, numpy, seaborn, plotly, streamlit
+6. Load the dataset in a pandas dataframe : df 
+7. Explored the dataframes few rows using : df.head()
+8. Checked the dataframe for null/missing values using : isnull() -> output: 5 columns contained missing values
+9. Explored those 5 columns for distinct values they contain 
+10. All 5 columns wer categorial columns for used mode for imputation and handled the missing values
+11. 
+Insights I gained
