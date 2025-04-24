@@ -8,7 +8,43 @@ Steps I followed
 6. Load the dataset in a pandas dataframe : df 
 7. Explored the dataframes few rows using : df.head()
 8. Checked the dataframe for null/missing values using : isnull() -> output: 5 columns contained missing values
-9. Explored those 5 columns for distinct values they contain 
-10. All 5 columns wer categorial columns for used mode for imputation and handled the missing values
-11. 
-Insights I gained
+9. Explored those 5 columns for distinct values they contain : acqCountry, mechantCountryCode, posEntryMode, posConditionCode, transactionType
+10. All 5 columns wer categorial columns for used mode for imputation and handled the missing values: fillna(), mode()
+11. Check for duplicates: df.duplicated().sum() -> no duplicates found
+12. For checking outliers in numerical columns: creditLimit, availableMoney, transactionAmount, currentBalance, first i explored if there columns are normally distributed or not 
+13. I ploted histogram: histplot() -> there 4 numerical columns are positively skewed (peak on the left, tail stretching to the right)
+14. So for outlier detection used : IQR -> (Q1 - 1.5 * IQR) , (Q3 + 1.5 * IQR), values not falling in this ranger are considered outliers
+15. Visualized outliers -> Boxplot of creaditLimit, availableMoney, transactionAmount, currentBalance
+16. Also viewed outliers from different approach -> Transaction Amount > Available Money and plotted scatterplot
+17. Summary Statistics and Distribution for those 4 columns -> describe() -> (count, mean, std, min, max, 25%, 50%, 75%)
+18. Correlation Analysis -> Correlation Matrix of (creaditLimit, availableMoney, transactionAmount, currentBalance) -> it is found that creditLimit and availableMoney are higly correlated, also creditLimit and currentBalance are also moderately correlated -> sns.heatmap( correlation_matrix..)
+19. Plotted a scatterplot availableMoney vs creditLimit that also showed the correlation -> increasing creaditlimit increase the availableMoney 
+20. For time-based analysis first checked the datatype of 24 columns and converted dates to datetimeformat -> to_datetime()
+21. a. Trend of Transactions Over time -> line graph -> showing monthly and weekly transaction trend -> max transactions in Octover month, max transaction in fourth week of december
+21. b. Hour of Day when most transaction and frauds happen -> bar chart, most transactions hour : 16 hour, most fraud transaction hour : 23 hour
+22. c. Most active day of week-> bar plot -> max transaction: thursday, max frauds: saturday
+23. Geographic analysis :
+24. a. Transaction frequency and transaction amount by country: US on the top, Mexio second and then canada and at last Puerto Rico
+25. b. Fraud rate by country -> bar plt ->  max in Canada, then in Puerto
+26. Merchant Analysis:
+27. a. Top merchantName and merchantCategory by transaction frequency and amount :> top merchantName: Lyft, uber... , top merchantCategory: online_retail, fastfood, food,..
+28. b. Fraud rate by merchantCategoryCode -> top ones are : hotels, online_retail, rideshare...
+29. Fraud Pattern Identification
+30. a. posEntryMode and posConditionCode combinations that can be risky: 90, 99 (QR or others, unknown)
+31. b. Fraud rate by transactionType -> top : REVERSAL, then PURCHASE, THEN ADDRESS_VERIFICATION
+32. c. Fraud rate by cardPresent flag -> cardNotPresent have higher (1.95) while cardPresent have (1.55)%
+33. d. Repeated frauds from same customerId or accountNumber (here both are same): 
+34.     i. First listed all accounts whose isFraud is true
+        ii. Createad a copy of dataframe containing only those accounts rows that are risky
+        iii. then explored for most frequent merchantName in that dataframe -> Uber, Lyft, alibaba.com..so on
+        iv. most frequent merchants category in repeated frauds ->online_retail, fastfood ...
+        v. most common transaction amount -> many times 0.0 amount, then 171.51, 212.60 similary..
+        vi. transaction type used by repeated fraud accounts -> purchase (highest)
+        vii. POS Entry modes involved in repeated frauds: -> 9 ( manual card details entry), 2 (Magnetic stripe swipe — Older method), 5 (chip read)
+        viii. Merchant countries invovled in repeated frauds -> US 
+        ix. Average time gap between account opening and transaction date -: 30.45 months
+
+35. Checking if mismathes in CVV or Expiration date correlate with fraud -> CVV mismatch fraud rate (3.28%), Expiration date mismatch fraud rate (1.76%)
+36. Spending behavior : Fraud vs Non-fraud : clustered column chart ->In fraud as the availableMoney grows the transaction amount also grows, while in non fraud its remains normal,
+again plotted in a bar and line graph combined then it showed that: Users with mid-level available money (20K–30K) seem to be more vulnerable to fraud, even though their transaction behavior is similar to others, also 
+Interestingly, the fraud rate drops in the highest available money bin (40K–50K).
