@@ -48,3 +48,14 @@ Steps I followed
 36. Spending behavior : Fraud vs Non-fraud : clustered column chart ->In fraud as the availableMoney grows the transaction amount also grows, while in non fraud its remains normal,
 again plotted in a bar and line graph combined then it showed that: Users with mid-level available money (20K–30K) seem to be more vulnerable to fraud, even though their transaction behavior is similar to others, also 
 Interestingly, the fraud rate drops in the highest available money bin (40K–50K).
+
+
+
+What challenges I encountered: 
+1. Not sure which visualization charts to use in many cases, so I performed just hit and terminal
+2. Familiar to just few functions of pandas, matplotlib, and seaborn, so used ChatGPT and felt a need to learn about more methods and it's arguments
+3. Also posEntryMode, posConditionCode were completely new to me , from google learnt basis code and their meanings
+4. I handled the missing data by replacing with mode values, but not sure if i was efficient method or not
+5. While drawing insights and pattern, i randomly choosed columns and get started, not sure if I need to follow or give priority to certain columns first
+6. Boxplot was new to me , took time to understand this
+7. Also for outlier detection, I first checked for the distribution of numerical columns
