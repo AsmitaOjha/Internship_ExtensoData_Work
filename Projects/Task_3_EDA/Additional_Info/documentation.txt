@@ -59,3 +59,36 @@ What challenges I encountered:
 5. While drawing insights and pattern, i randomly choosed columns and get started, not sure if I need to follow or give priority to certain columns first
 6. Boxplot was new to me , took time to understand this
 7. Also for outlier detection, I first checked for the distribution of numerical columns
+
+
+what I need to improve -> inspired from Intern Mate -> Bishnu
+1. which account number does most transactions
+2. availableMoney negative value why?
+3. outlier range outlier ma kun 
+4. std high then mean why, what happens : what does it signifies
+5. mean get affected by outliers, mean says what?
+6. each ko Statistics herne ke bhanxh batau necessary
+7. time analysis -> no of transaction in each month, and fraud transaction in each month, which is highest
+8. no of trasnaction is highest at 4 pm evening and whereas lowest at 2 pm.. similary
+9. at which time fraud trasnaction occur, and which normal time
+10. which day transaction amount high and when lowest, 
+11. which day transaction count high and low,
+12. which day fraud trasnaction 
+13. pareto, log normality what are these
+14. normal average transaction amount vs fraud average transaction amount
+15. merchant name contained # -> merchantBrand ma changed
+16. merchant how many free from fraud, number, chi square used
+17, which have highest trasnactoin and which are fruad prone
+18. pie char used for fradulent transaction for country
+19. kati ota transaction kun posEntryMode baat aayo, most common kun ho 
+20. most common trasnaction in posConditionCode 
+
+
+futher suggestion:
+1. mulltivariate
+2. customer ani transaction data both in the dataset so explored
+3. isFraud for customer or transaction bujhne
+4. customer le kati trasnaction kun ma garxh
+5. customer perspective ma ni herne along with transaction perspective
+6. 
+
