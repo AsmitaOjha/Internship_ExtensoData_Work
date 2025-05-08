@@ -1,0 +1,30 @@
+What Are Classification and Regression Algorithms?
+These are two types of supervised machine learning algorithms, used to predict outcomes based on data.
+
+1. Classification Algorithms
+Purpose: Predict a category or class (e.g., True/False, Spam/Not Spam, Fraud/Not Fraud).
+
+Output: Discrete values (labels or categories).
+
+Examples:
+-Logistic Regression
+-Decision Tree Classifier
+-Random Forest
+-K-Nearest Neighbors
+-Support Vector Machine
+-Naive Bayes
+
+In your fraud detection dataset, predicting isFraud (True/False) is a classification problem.
+
+2. Regression Algorithms
+Purpose: Predict a continuous numeric value (e.g., price, age, transaction amount).
+Output: Real numbers.
+
+Examples:
+-Linear Regression
+-Decision Tree Regressor
+-Random Forest Regressor
+-Gradient Boosting Regressor
+
+Use case for you: If you wanted to predict transactionAmount based on other features, that would be a regression problem.
+
