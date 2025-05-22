@@ -1,0 +1,59 @@
+Source: Chatgpt
+Awesome, Asmita! Let’s break down these important concepts so your preprocessing step is crystal clear.
+
+---
+
+## 1️⃣ What is **train\_test\_split** and why do we use it?
+
+* **Purpose:** To evaluate how well your machine learning model performs on new, unseen data.
+* **What it does:** Splits your dataset into two parts:
+
+  * **Training set:** Used to train the model (learn patterns).
+  * **Testing set:** Used to test how well the model generalizes (predicts on data it has never seen before).
+
+By splitting, you avoid **overfitting** (model memorizing the data) and get a realistic estimate of performance.
+
+---
+
+## 2️⃣ What is **One-Hot Encoding**?
+
+* It’s a method to convert **categorical variables** (like `'merchantCountryCode'` or `'transactionType'`) into numeric format, because machine learning models **need numbers** to process data.
+* **How it works:** For each category in a column, it creates a new binary (0 or 1) column.
+
+Example:
+
+| Color |
+| ----- |
+| Red   |
+| Blue  |
+| Green |
+
+One-hot encoded becomes:
+
+| Color\_Red | Color\_Blue | Color\_Green |
+| ---------- | ----------- | ------------ |
+| 1          | 0           | 0            |
+| 0          | 1           | 0            |
+| 0          | 0           | 1            |
+
+---
+
+## 3️⃣ Why do we convert categorical variables to numeric?
+
+* Most machine learning algorithms **cannot work directly with text or categorical data**.
+* Models rely on **mathematical calculations** which require numbers.
+* Converting categories to numeric form allows algorithms to learn relationships and patterns in your data.
+
+---
+
+## Summary:
+
+| Concept                           | Why?                                      | What it does                                     |
+| --------------------------------- | ----------------------------------------- | ------------------------------------------------ |
+| **train\_test\_split**            | To fairly evaluate your model             | Splits data into train and test parts            |
+| **One-Hot Encoding**              | ML needs numbers, not text                | Converts categories into multiple binary columns |
+| **Convert categories to numeric** | To feed categorical data to ML algorithms | Enables mathematical processing by algorithms    |
+
+---
+
+Would you like me to show you a code example on how to do these steps with your dataset next?
