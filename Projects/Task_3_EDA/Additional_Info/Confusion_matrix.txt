@@ -1,0 +1,64 @@
+📘 Confusion Matrix & Evaluation Metrics — Summary for Binary Classification
+
+# 🔲 Confusion Matrix Format
+
+|                 | Predicted: No (0)   | Predicted: Yes (1)  |
+| --------------- | --------------------| ------------------- |
+| Actual: No (0)  | TN (True Negative)  | FP (False Positive) |
+| Actual: Yes (1) | FN (False Negative) | TP (True Positive)  |
+
+---
+
+# 📌 Metrics Formulas
+
+1. Precision
+
+> Measures how many predicted positives were correct.
+
+Precision = TP / (TP + FP)
+
+2. Recall (Sensitivity or True Positive Rate)
+
+> Measures how many actual positives were correctly predicted.
+
+Recall = TP / (TP + FN)
+
+3. F1-Score
+
+> Harmonic mean of Precision and Recall (balances both).
+
+F1 Score = 2 × (Precision × Recall) / (Precision + Recall)
+4. Accuracy
+
+> Overall correctness of the model.
+
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+5. Support
+> Total actual occurrences of each class.
+Support (class 0) = TN + FP
+Support (class 1) = TP + FN
+
+
+---
+
+# ✅ Example Values (for reference)
+
+If confusion matrix is:
+
+
+[[83965 42158]
+ [  854  1406]]
+
+
+Then:
+
+* Precision ≈ 1406 / (1406 + 42158) ≈ 0.032
+* Recall ≈ 1406 / (1406 + 854) ≈ 0.622
+* F1 Score ≈ 2 × (0.032 × 0.622) / (0.032 + 0.622) ≈ 0.06
+* Accuracy ≈ (83965 + 1406) / 128383 ≈ 0.665
+* Support for class 0 = 83965 + 42158 = 126123
+* Support for class 1 = 854 + 1406 = 2260
+
+
+
