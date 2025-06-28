@@ -167,7 +167,7 @@ def admin_dashboard():
                     "user_id": "User ID",
                     "account_type": "Account Type",
                     "account_balance": "Balance",
-                    "created_at": "Created At",
+                    "created_at": "Created At", 
                     "account_status": "Status"
                 })
                 st.dataframe(account_data)
